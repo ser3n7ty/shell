@@ -132,6 +132,7 @@ int ysh_launch(char **args) {
 	// fork() 
 	// parent and child process will execute the rest code
 	// parent process needs to wait
+	// TODO: 换用另外一种方式实现
 	pid = fork();
 	if(pid == 0) {
 		if(execvp(args[0], args) == -1) {
